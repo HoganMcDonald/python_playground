@@ -40,3 +40,23 @@ def alphabet_soup(text):
 
 
 print(alphabet_soup('python'))
+
+
+# https://edabit.com/challenge/GrPXERNbrjyCmHPDg
+# Create a function that takes a string and returns the number of alphanumeric characters that occur more than once.
+
+
+def duplicate_count(txt):
+    dup_chars = 0
+    my_set = set(txt)
+    for i in my_set:
+        count = 0
+        for j in txt:
+            if i == j:
+                count += 1
+        if count > 1:
+            dup_chars += 1
+    return dup_chars
+
+
+print(duplicate_count('Indivisibilities')) # should be 2
