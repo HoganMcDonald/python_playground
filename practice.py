@@ -29,4 +29,14 @@ def get_abs_sum(nums):
 print(get_abs_sum(test_list))
 
 
+# https://edabit.com/challenge/4Agr8CTY7x2rAhh5n
+# Create a function that takes a string  and returns a string with its letters in alphabetical order.
 
+
+def alphabet_soup(text):
+    text = list(text)
+    text.sort()
+    return ''.join(text)
+
+
+print(alphabet_soup('python'))
