@@ -59,4 +59,19 @@ def duplicate_count(txt):
     return dup_chars
 
 
-print(duplicate_count('Indivisibilities')) # should be 2
+print(duplicate_count('Indivisibilities'))  # should be 2
+
+
+# https://edabit.com/challenge/bPHcgMpkf9WvbwbAo
+# Create a function that accepts an array of 10 integers (between 0 and 9) and returns a
+# string of those numbers in the form of a phone number.
+
+
+def format_phone_number(num):
+    n = '(%s%s%s) %s%s%s-%s%s%s%s'
+    phone = list(str(num))
+    print(phone)
+    return n % tuple(phone)
+
+
+print(format_phone_number(1234567890))
