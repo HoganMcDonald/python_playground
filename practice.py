@@ -70,8 +70,26 @@ print(duplicate_count('Indivisibilities'))  # should be 2
 def format_phone_number(num):
     n = '(%s%s%s) %s%s%s-%s%s%s%s'
     phone = list(str(num))
-    print(phone)
     return n % tuple(phone)
 
 
 print(format_phone_number(1234567890))
+
+
+# https://edabit.com/challenge/97Shytt5nzjX4YWzJ
+# Write a function that takes a string of brackets and checks whether they are balanced or not.
+
+
+def is_balanced(str):
+    print(str[::-1])
+    if type(str) is str:
+        return 'none'
+    elif str == str[::-1]:
+        return True
+    else:
+        return False
+# compare first half to second half.
+# create a switch
+# pass each char into switch and see if matches
+
+print(isBalanced('[{{[]}}]'))
