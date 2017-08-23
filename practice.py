@@ -86,20 +86,19 @@ print(format_phone_number(1234567890))
 
 def is_balanced(str):
     if len(str) > 0:
-        bracket_reference = {'(': ')', ')': '(', '{': '}', '}': '{', '[': ']', ']': '['}
-        char_lst = list(str)
-        a = 0
-        b = len(char_lst) - 1
-        while a < b:
-            if char_lst[a] != bracket_reference[char_lst[b]]:
-                return False
-            else:
-                a += 1
-                b -= 1
-        return True
+        bracket_reference = {'(': ')', '{': '}', '[': ']'}
+        stack = []
+        for character in str:
+            if character in bracket_reference.keys():
+                stack.append(character)
+            elif character in bracket_reference.values():
+                if bracket_reference[stack[-1]] == character:
+                    stack.pop()
+                else:
+                    return False
+        return not len(stack)
     else:
         return 'none'
-
 
 
 print(is_balanced('{{[[(())[]]]}}'))
