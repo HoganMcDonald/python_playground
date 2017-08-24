@@ -12,7 +12,7 @@ def return_largest(nums):
     return mem
 
 
-print(return_largest(test_list))
+print('function 1:', return_largest(test_list))
 
 
 # https://edabit.com/challenge/rCmEy2AQYLbRGgKyL
@@ -27,7 +27,7 @@ def get_abs_sum(nums):
     return sum
 
 
-print(get_abs_sum(test_list))
+print('function 2:', get_abs_sum(test_list))
 
 
 # https://edabit.com/challenge/4Agr8CTY7x2rAhh5n
@@ -41,7 +41,7 @@ def alphabet_soup(text):
     return ''.join(text)
 
 
-print(alphabet_soup('python'))
+print('function 3:', alphabet_soup('python'))
 
 
 # https://edabit.com/challenge/GrPXERNbrjyCmHPDg
@@ -62,7 +62,7 @@ def duplicate_count(txt):
     return dup_chars
 
 
-print(duplicate_count('Indivisibilities'))  # should be 2
+print('function 4:', duplicate_count('Indivisibilities'))  # should be 2
 
 
 # https://edabit.com/challenge/bPHcgMpkf9WvbwbAo
@@ -76,7 +76,7 @@ def format_phone_number(num):
     return n % tuple(phone)
 
 
-print(format_phone_number(1234567890))
+print('function 5:', format_phone_number(1234567890))
 
 
 # https://edabit.com/challenge/97Shytt5nzjX4YWzJ
@@ -101,7 +101,7 @@ def is_balanced(str):
         return 'none'
 
 
-print(is_balanced('{{[[(())[]]]}}'))
+print('function 6:', is_balanced('{{[[(())[]]]}}'))
 
 
 # https://edabit.com/challenge/4gzDuDkompAqujpRi
@@ -116,4 +116,26 @@ def add_up(num):
     return num_to_return
 
 
-print(add_up(485))
+print('function 7:', add_up(485))
+
+
+# https://edabit.com/challenge/TBCujkw9D8hrEgFc4
+# Your job is to create a function that accepts a string as its only
+# argument. The function will return true if the email is valid and false if it's not.
+
+
+def validate_email(string):
+    if '@' in string:
+        string_at = string.split('@')
+        if len(string_at) == 2 and string_at[0] != '':
+            if '.com' in string_at[-1]:
+                return True
+            else:
+                return False
+        else:
+            return False
+    else:
+        return False
+
+
+print('function 8:', validate_email('@edabit.com'))
