@@ -103,3 +103,17 @@ def is_balanced(str):
 
 print(is_balanced('{{[[(())[]]]}}'))
 
+
+# https://edabit.com/challenge/4gzDuDkompAqujpRi
+# Create a function that takes a number as an argument. Add up all the
+# numbers from 1 to the number you passed to the function.
+
+
+def add_up(num):
+    num_to_return = 0
+    for i in range(1, num):
+        num_to_return += i
+    return num_to_return
+
+
+print(add_up(485))
